@@ -165,14 +165,14 @@ if(digitalRead(LINKENA) == LOW){     // check if link is enabled,
 
 digitalWrite(AUDIOSW, SOURCE);
 if(COROUT){
-  digitalWrite(COROUTPIN, CORDIP); 
+  digitalWrite(COROUTPIN, digitalRead(CORDIP)); 
 } else {
-  digitalWrite(COROUTPIN, !CORDIP);
+  digitalWrite(COROUTPIN, !digitalRead(CORDIP));
 }
 if(PLOUT){
-  digitalWrite(PLOUTPIN, PLDIP); 
+  digitalWrite(PLOUTPIN, digitalRead(PLDIP)); 
 } else {
-  digitalWrite(PLOUTPIN, !PLDIP);
+  digitalWrite(PLOUTPIN, !digitalRead(PLDIP));
 }
 
 
